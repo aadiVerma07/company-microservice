@@ -1,0 +1,20 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: Company-Service
+  datasource:
+    url: jdbc:mysql://localhost:3306/Job
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+Eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

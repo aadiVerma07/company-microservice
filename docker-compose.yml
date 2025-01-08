@@ -1,0 +1,15 @@
+services:
+  app:
+    image: company
+    container_name: company
+    ports:
+      - "8083:8083"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://MySQl-Container:3306/MicroService
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    networks:
+      - my_network
+networks:
+  my_network:
+    external: true
